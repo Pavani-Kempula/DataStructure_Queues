@@ -20,7 +20,8 @@ public class Queue<T> {
      *
      * @param DATA
      */
-    public void enQueue(T DATA) {
+    public void enQueue(T DATA)
+    {
         if(front == null) {
             rear = new Node<T>(DATA);
             front = rear ;
@@ -32,15 +33,32 @@ public class Queue<T> {
         length++;
     }
 
-    //this method will return length of a queue.
+    //this method will return length of an queue.
     public int size() {
         return length;
     }
 
     /*
+     * Name : deQueue
+     *
+     * Description : Deleting data from the queue.
+     *
+     * @return
+     */
+    public T deQueue() {
+        if(front != null) {
+            T result = front.DATA;
+            front = front.next;
+            length--;
+            return result;
+        }
+        return null;
+    }
+
+    /*
      * Name : displayQueue
      *
-     * Description : Traversing over queue and printing the element inside queue.
+     * Description : Traversing over queue and printing the element inside queque.
      */
     public void displayQueue() {
         Node<T> curretnNode = front;
@@ -49,5 +67,4 @@ public class Queue<T> {
             curretnNode = curretnNode.next;
         }
     }
-
 }

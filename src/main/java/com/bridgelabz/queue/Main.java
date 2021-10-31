@@ -13,10 +13,19 @@ public class Main {
         queue.enQueue(70);
 
         //printing size of an queue.
-        System.out.println("Size of the queue is : " + queue.size() +"\n");
+        System.out.println("Size of the queue is : " + queue.size() + "\n");
 
         //printing all elements of queue.
         queue.displayQueue();
         System.out.println();
+
+        //deQueue element from queue.
+        System.out.println("An element deQueued : " + queue.deQueue() + "\n");
+
+        //printing size of an queue.
+        System.out.println("Size of the queue is : " + queue.size() + "\n");
+
+        //printing all elements of queue.
+        queue.displayQueue();
     }
 }
